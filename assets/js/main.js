@@ -35,9 +35,8 @@ tabs.forEach(tab => {
 
       let pourcent = tabs_ar.indexOf(tab) / (total - 1);
 
-      var translateY = -(pourcent * 100);
       target.style.top = (pourcent * 100).toString() + "%";
-      target.style.transform = `translateX(0%) translateY(${translateY}%)`;
+      target.style.transform = `translateX(0%) translateY(-${pourcent * 100}%)`;
       console.log(target); 
 
     });
