@@ -17,10 +17,21 @@
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Responsive portfolio website - Crypticalcoder</title>
+    <title>Responsive portfolio website</title>
 </head>
 
 <body>
+
+    <!-- Loading screen -->
+    <div class="loader">
+        <div class="loader_left">
+            <div class="load_bar"></div>
+        </div>
+        <div class="loader_right">
+            <div class="load_bar"></div>
+        </div>
+    </div>
+
     <!--========== SIDEBAR ==========-->
     <div class="nav__toggle" id="nav-toggle">
         <i class="uil uil-bars"></i>
@@ -29,7 +40,7 @@
         <nav class="nav">
             <div class="nav__logo">
                 <a href="index.html" class="nav__logo-text">
-                    M
+                    Q
                 </a>
             </div>
 
@@ -91,7 +102,7 @@
                 <img src="assets/img/home-img.png" alt="" class="home__img">
 
                 <div class="home__data">
-                    <h1 class="home__title">Hi, I'm Jeanne</h1>
+                    <h1 class="home__title">Hi, I'm Quentin</h1>
                     <h3 class="home__subtitle">FrontEnd Developer</h3>
                     <p class="home__description">High level experience in web design and develoment knowledge, toussa toussa</p>
                     <a href="#about" class="button"><i class="uil uil-user button__icon"></i>
@@ -181,7 +192,7 @@
                     </h3>
 
                     <div class="timeline">
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_left">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">University of Geneva</h3>
                             <p class="timeline__text">Master of JSP</p>
@@ -191,7 +202,7 @@
                             </span>
                         </div>
 
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_left">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">University of Geneva</h3>
                             <p class="timeline__text">Master of JSP</p>
@@ -201,7 +212,7 @@
                             </span>
                         </div>
 
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_left">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">University of Geneva</h3>
                             <p class="timeline__text">Master of JSP</p>
@@ -220,7 +231,7 @@
                     </h3>
 
                     <div class="timeline">
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_right">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">Champion de lancer de hache</h3>
                             <p class="timeline__text">Contre des nains</p>
@@ -230,7 +241,7 @@
                             </span>
                         </div>
 
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_right">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">Champion de lancer de nain</h3>
                             <p class="timeline__text">Contre des haches</p>
@@ -240,7 +251,7 @@
                             </span>
                         </div>
 
-                        <div class="timeline__item">
+                        <div class="timeline__item hidden from_right">
                             <div class="circle__dot"></div>
                             <h3 class="timeline__title">Champion de lancer</h3>
                             <p class="timeline__text">Nain avec Hache</p>

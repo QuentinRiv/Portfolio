@@ -182,7 +182,43 @@ function navHighlighter() {
   })
 }
 
-/*=============== SHOW SCROLL UP ===============*/
+/*=============== SHOW SCROLL ===============*/
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+window.addEventListener("load", function () {
+
+  setTimeout(function () {
+    const load_bars = document.querySelectorAll(".load_bar");
+    load_bars.forEach((load_bar) => {
+      load_bar.style.width = "80vw";
+    })
+
+  }, 100);
+
+  // Preloader
+  setTimeout(function () {
+    const loader_left = document.querySelector(".loader_left");
+    if (loader_left) {
+      loader_left.style.transform = "translate(-30vw, 100vh)";
+    }
+
+    const loader_right = document.querySelector(".loader_right");
+    if (loader_right) {
+      loader_right.style.transform = "translate(30vw, -100vh)";
+    }
+  }, 2000);
+});
 
 
 // fleche = document.querySelectorAll(".skills__arrow").length;
