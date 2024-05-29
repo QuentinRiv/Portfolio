@@ -1213,12 +1213,12 @@ textarea.input {
     width: 1vw; 
     height: 1vh;
     border-radius: 10px;
-    background-color: var(--skin-color);
+    background-color: var(--skin-color) !important;
     top: 50vh;
     left: 50vw; 
-    transform: translate(-50%, -50%) rotate(-65deg);
+    /* transform: translate(-50%, -50%);  */
     z-index: 11111111111111;
-    transition: all 1s ease;
+    transition: width 1s ease;
 }
 
 

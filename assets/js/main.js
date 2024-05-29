@@ -24,12 +24,21 @@ const tabs = document.querySelectorAll("[data-target]"),
       tabContents = document.querySelectorAll("[data-content]");
 
 tabs.forEach(tab => {
+
+  var tabs_ar = Array.prototype.slice.call(tabs); // Now it's an Array.
+  var total = document.querySelectorAll(".skills__arrow").length;
+
+  let pourcent = tabs_ar.indexOf(tab) / (total - 1);
+  const target = document.querySelector(tab.dataset.target);
+  target.style.top = (pourcent * 100).toString() + "%";
+  target.style.transform += `translateY(-${pourcent * 100}%)`;
+
     tab.addEventListener("click", () => {
       const target = document.querySelector(tab.dataset.target);
 
       tabContents.forEach((tabContent) => {
         tabContent.classList.remove("skills__active");
-        tabContent.style.transform = "translateX(10%)"
+        // tabContent.style.transform = "translateX(10%)"
       });
 
       target.classList.add("skills__active");
@@ -38,16 +47,11 @@ tabs.forEach(tab => {
         tab.classList.remove("skills__active");
       });
 
-      tab.classList.add("skills__active");
+      tab.classList.add("skills__active");      
 
-      var tabs_ar = Array.prototype.slice.call(tabs); // Now it's an Array.
-      var total = document.querySelectorAll(".skills__arrow").length;
-
-      let pourcent = tabs_ar.indexOf(tab) / (total - 1);
-
-      target.style.top = (pourcent * 100).toString() + "%";
-      target.style.transform = `translateX(0%) translateY(-${pourcent * 100}%)`;
-      console.log(target); 
+      // target.style.top = (pourcent * 100).toString() + "%";
+      // target.style.transform = `translateX(0%) translateY(-${pourcent * 100}%)`;
+      // console.log(target); 
 
     });
 })
@@ -198,10 +202,19 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 window.addEventListener("load", function () {
 
+  const load_bars = document.querySelectorAll(".load_bar");
+  var viewportHeight = window.innerHeight;
+  var viewportWidth = window.innerWidth;
+  var numerator = viewportWidth*0.3;
+  console.log("=>", numerator)
+  load_bars.forEach((load_bar) => {
+    load_bar.style.transform +=
+      `translate(-50%, -50%) rotate(atan(calc(-${viewportHeight}/${numerator})))`;
+  });
+
   setTimeout(function () {
-    const load_bars = document.querySelectorAll(".load_bar");
     load_bars.forEach((load_bar) => {
-      load_bar.style.width = "80vw";
+      load_bar.style.width = "120vw";
     })
 
   }, 100);
