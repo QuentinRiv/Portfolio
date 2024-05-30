@@ -186,6 +186,7 @@ function navHighlighter() {
   })
 }
 
+
 /*=============== SHOW SCROLL ===============*/
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
