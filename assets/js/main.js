@@ -236,4 +236,4 @@ window.addEventListener("load", function () {
 
 
 // fleche = document.querySelectorAll(".skills__arrow").length;
-// console.log(fleche);
+// console.log("=>", fleche);
