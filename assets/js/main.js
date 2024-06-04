@@ -207,7 +207,7 @@ window.addEventListener("load", function () {
   var viewportHeight = window.innerHeight;
   var viewportWidth = window.innerWidth;
   var numerator = viewportWidth*0.3;
-  console.log("=>", numerator)
+  console.log("=> enumerator", numerator)
   load_bars.forEach((load_bar) => {
     load_bar.style.transform +=
       `translate(-50%, -50%) rotate(atan(calc(-${viewportHeight}/${numerator})))`;
