@@ -212,7 +212,6 @@ window.addEventListener("load", function () {
     load_bar.style.transform +=
       `translate(-50%, -50%) rotate(atan(calc(-${viewportHeight}/${numerator})))`;
   });
-  
 
   setTimeout(function () {
     load_bars.forEach((load_bar) => {
