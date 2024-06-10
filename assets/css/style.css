@@ -438,7 +438,7 @@ input {
 .about__icon {
     font-size: 1.5rem;
     color: var(--skin-color);
-    margin-bottom: var(--mb-0-75);
+    margin-bottom: 2rem;
 }
 
 .about__title {
@@ -601,7 +601,7 @@ input {
 }
 
 .skills__bar {
-    background-color: var(--skin-color);
+    background-color: grey;
 }
 
 .skills__percentage {
